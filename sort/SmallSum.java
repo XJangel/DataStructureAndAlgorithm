@@ -10,7 +10,7 @@
 
 package sort;
 
-public class Solution {
+public class SmallSum{
 
 	public static int smallSum(int[] arr) {
 		if (arr == null || arr.length < 2) {
