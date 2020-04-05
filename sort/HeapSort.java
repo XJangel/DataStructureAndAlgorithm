@@ -3,7 +3,8 @@ package sort;
 public class HeapSort {
     public static void heapSort(int[] array) {
         if(array == null || array.length == 1) return;
-        //创建大根堆
+        // 创建大根堆
+        // 其实就是新加入节点，将其上调到合适的位置
         for(int i = 0; i < array.length; i++) {
             heapInsert(array, i);
         }
@@ -28,6 +29,7 @@ public class HeapSort {
         array[i] = array[j];
         array[j] = tmp;
     }
+    // heapify就是当节点中的某一个值变小，将其下调使整个数组重新变为大根堆的过程
     public static void heapify(int[] array,int index,int heapsize) {
         int left = 2*index+1; // 先得出其左节点，在有左节点的前提下进行大小比较
         while(left < heapsize) {
